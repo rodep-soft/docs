@@ -12,17 +12,23 @@ Sphinx, MyST-Parserを使用. ドキュメントはMarkdownで記述する.
 
 `uv`必須.
 
-### Command
+### Commands
 
 ```bash
-# 依存解決
-uv sync
+# 初回セットアップ (依存関係 + pre-commitフック登録)
+make setup
 
-# Preview
+# ローカルプレビュー (ホットリロード)
 make serve
 
-# build html
-make html
+# HTMLビルド
+make build
+
+# 自動整形 (フォーマッタ / リンタ一括実行)
+make fmt
+
+# コマンド一覧の確認
+make help
 ```
 
 ---

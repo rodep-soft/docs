@@ -51,10 +51,3 @@ Linux固有というわけでもなく、macOSだと`brew`, Windowsだと`winget
 - Cargo (Rust)
 
 1つの言語で1つのPMという訳ではないので注意.
-
-
-
-
-
-
-

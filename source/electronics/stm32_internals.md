@@ -54,7 +54,7 @@ STM32では、SWDIO（PA13）とSWCLK（PA14）はリセット直後はデバッ
 
 ```c
 // 致命的な失敗例：PA13, PA14をGPIO出力にしてしまう
-GPIO_InitStruct.Pin = GPIO_PIN_13 | GPIO_PIN_14; 
+GPIO_InitStruct.Pin = GPIO_PIN_13 | GPIO_PIN_14;
 GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 // これが実行された瞬間、ST-Linkはマイコンを見失う

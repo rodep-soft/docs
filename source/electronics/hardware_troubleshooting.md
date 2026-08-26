@@ -139,10 +139,10 @@ float Filter_Update(MovingAverageFilter *filter, float new_value) {
     // 新しいデータを追加する
     filter->buffer[filter->index] = new_value;
     filter->sum += new_value;
-    
+
     // インデックスの更新
     filter->index = (filter->index + 1) % FILTER_SIZE;
-    
+
     return filter->sum / FILTER_SIZE;
 }
 ```

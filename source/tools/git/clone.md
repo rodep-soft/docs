@@ -10,7 +10,7 @@ SSH鍵を設定していると全自動で同期できるのでするべき.
 ### ghを使った方法
 
 ```bash
-$ ssh-keygen -t ed25519 -C "Comment" 
+$ ssh-keygen -t ed25519 -C "Comment"
 $ gh auth login
 ```
 

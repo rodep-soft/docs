@@ -1,6 +1,6 @@
 # ros2でのDockerの基本の使い方
 
-基本ですがそれなりにDockerを使ったことがある人を想定しています.  
+基本ですがそれなりにDockerを使ったことがある人を想定しています.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@
 
 [DockerHub](https://hub.docker.com/)
 
-ホストがamd64ならよく使われるのは`osrf/ros`(公式)  
+ホストがamd64ならよく使われるのは`osrf/ros`(公式)
 Dockerはkernelをホストと共有するのでアーキテクチャ(amd64/arm64)に注意.
 
 [Ros2 Image](https://hub.docker.com/r/osrf/ros)
@@ -91,7 +91,7 @@ $ exit
 6. 回す
 
 コンテナ内で作業をしていて、依存追加が必要になった時などは`Dockerfile`を書き換え、
-またビルドをする. 
+またビルドをする.
 
 ただし、毎回Dockerfileを書き換えるたびにビルドしていると時間が勿体無いので、コンテナの中で
 ある程度作業して動作確認してからファイルを書き換えて再びビルドをすると良い.
@@ -148,12 +148,12 @@ Dockerは`cgroupsv2`や`namespace`といった現代のLinux Kernelの機能を�
 
 1. Native Linuxの場合
 
-普通のDistributionであればDockerがネイティブに動く. 
+普通のDistributionであればDockerがネイティブに動く.
 overheadも少なく、理想的な環境である.
 
 2. Windowsの場合
 
-基本的に`WSL2`を用いることでLinux Kernelを用意し、そのカーネルを用いてDockerを使う. 
+基本的に`WSL2`を用いることでLinux Kernelを用意し、そのカーネルを用いてDockerを使う.
 `Docker Desktop`を使う際でも同じ構造.
 
 3. macOSの場合
@@ -164,10 +164,10 @@ VMでLinuxを用意し、それを用いてDockerを使う. 勿論Linuxホスト
 
 ## Docker Networkの設定
 
-Dockerは専用のネットワークインターフェースを作る(docker0). 
+Dockerは専用のネットワークインターフェースを作る(docker0).
 デフォルトでは`bridge`モードであり、コンテナ同士は通信することができる.
 
-`bridge`モードの時、例えばコンテナ内の172.17.0.2が外に出る時に192.168.1.100に変換される. 
+`bridge`モードの時、例えばコンテナ内の172.17.0.2が外に出る時に192.168.1.100に変換される.
 要するにNATが動く(家庭用ルータなどと仕組みは同じ).
 
 Webサーバなどでは、PortForwardだけで十分なことが多い.
@@ -185,7 +185,7 @@ $ docker run -p 8080:80 nginx
 
 設定が複雑になりがちであり、接続が不安定になることも多い.
 
-そこで推奨されるのが、ホストと完全にネットワークを共有する`network_mode: host`. 
+そこで推奨されるのが、ホストと完全にネットワークを共有する`network_mode: host`.
 compose.yamlに記述する. この設定は危険な側面もあるためセキュリティには注意.
 
 ```yaml
@@ -241,7 +241,7 @@ Docker内で通常はGUIを表示することはできないが、設定や工�
 
 1. X11/Waylandでソケット通信する
 
-HostがLinuxであれば一番よくある方法. 
+HostがLinuxであれば一番よくある方法.
 
 よくある構成としては,
 
@@ -310,5 +310,3 @@ gpuがないPCだとコメントアウトするのが面倒であるので、`co
 ### コマンド長い時など
 
 `Makefile`や`Justfile`をタスクランナーとして使うと便利.
-
-

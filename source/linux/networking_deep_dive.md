@@ -55,11 +55,11 @@ NameResolvingService=systemd
 ```bash
 $ iwctl
 [iwd]# device list
-                                    Devices                                   
+                                    Devices
 --------------------------------------------------------------------------------
-  Name                Mac Address         Powered   Adapter   Mode      
+  Name                Mac Address         Powered   Adapter   Mode
 --------------------------------------------------------------------------------
-  wlan0               00:11:22:33:44:55   on        phy0      station   
+  wlan0               00:11:22:33:44:55   on        phy0      station
 
 [iwd]# station wlan0 scan
 [iwd]# station wlan0 get-networks
@@ -110,7 +110,7 @@ $ sudo dmesg | grep iwlwifi
 [ 1023.567890] iwlwifi 0000:03:00.0: Failed to wake NIC
 
 $ sudo journalctl -u iwd -f
-Jan 26 14:10:15 hostname iwd[543]: WARNING: src/station.c:station_roam_timeout() 
+Jan 26 14:10:15 hostname iwd[543]: WARNING: src/station.c:station_roam_timeout()
 Jan 26 14:10:15 hostname iwd[543]: wlan0: Disconnect event
 ```
 

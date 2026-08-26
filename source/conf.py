@@ -4,9 +4,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-project = 'RODEP Docs'
-copyright = '2026, RODEP'
-author = 'RODEP'
+project = "RODEP Docs"
+copyright = "2026, RODEP"
+author = "RODEP"
 
 # -- General configuration ---------------------------------------------------
 extensions = [
@@ -32,15 +32,15 @@ myst_enable_extensions = [
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 
-templates_path = ['_templates']
+templates_path = ["_templates"]
 exclude_patterns = []
 
-language = 'ja'
+language = "ja"
 
 # -- Options for HTML output -------------------------------------------------
 html_title = "RODEP Docs"
 html_theme = "furo"
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 # Furo theme options
 html_theme_options = {

@@ -30,9 +30,3 @@ $$
 = A
 \begin{pmatrix} v_x \\ v_y \\ w_z \end{pmatrix}
 $$
-
-
-
-
-
-

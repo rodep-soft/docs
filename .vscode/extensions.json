@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "executablebookproject.myst-highlight",
+    "charliermarsh.ruff",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "bierner.markdown-mermaid"
+  ]
+}

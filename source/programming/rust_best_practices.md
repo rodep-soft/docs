@@ -112,7 +112,7 @@ int main() {
         threads.emplace_back([state]() {
             // ミューテックスによる保護を忘れるとデータ競合が発生
             for (int j = 0; j < 1000; j++) {
-                state->counter++; 
+                state->counter++;
             }
         });
     }

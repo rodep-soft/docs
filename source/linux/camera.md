@@ -2,11 +2,11 @@
 
 ## Linuxからみたカメラとは？
 
-Linuxは`Everything is a file`の原理に基づき、カメラもデバイスファイルとして扱う. 
+Linuxは`Everything is a file`の原理に基づき、カメラもデバイスファイルとして扱う.
 ユーザからは`/dev/video0`などの名前で映像データを流してくる特殊なファイルとして見える.
 
 ```bash
-# 
+#
 $ ls /dev/video*
 
 # 勿論catできる(r権限必要)
@@ -20,7 +20,7 @@ Camera -> USB/CSI -> Kernel Driver -> V4L2 -> /dev/video* -> User Program
 
 ## Kernel Driver
 
-ハードウェア初期化、データ転送、割り込み、OS(Linux)との接続などの仕事をする. 
+ハードウェア初期化、データ転送、割り込み、OS(Linux)との接続などの仕事をする.
 LinuxではKernel moduleとしてロードされる. 速度の問題などでKernel Spaceで動く.
 
 実体は`*.ko(Kernel Object)`ファイル.
@@ -98,7 +98,7 @@ close(fd);
 
 read(), write()だけでは表現できない特殊命令用.
 
-前述したv4l2はカメラ専用のioctlプロトコル仕様のようなもの. 
+前述したv4l2はカメラ専用のioctlプロトコル仕様のようなもの.
 ioctl番号の定義(VIDIOC_QUERYCAPなど)はlinux/videodev2.hに定義されている.
 
 ```c
@@ -123,12 +123,12 @@ etc. 追記する.
 
 ## OpenCV
 
-User Spaceの画像処理フレームワーク. よくPythonやC++から使う. 
+User Spaceの画像処理フレームワーク. よくPythonやC++から使う.
 クロスプラットフォームなのでLinux, macOS, WindowsなどOSを気にせず書ける.
 
 ```c++
 # 入力
-# 
+#
 cv::VideoCapture cap(0);
 ```
 
