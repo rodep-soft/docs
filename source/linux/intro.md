@@ -20,6 +20,6 @@ Linuxの基礎から、カーネル・ネットワーク・シェル自動化ま
 :hidden:
 
 *
-cli/*
-networking/*
+cli/intro
+networking/intro
 ```

@@ -17,6 +17,6 @@
 :hidden:
 
 *
-docker/*
-git/*
+docker/intro
+git/intro
 ```

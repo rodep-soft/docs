@@ -33,8 +33,7 @@ jobs:
         run: uv sync
 
       - name: Build Sphinx (HTML)
-        # -W を付けると警告をエラーとして扱いCIを落とすことも可能
-        run: uv run sphinx-build -M html source build
+        run: uv run sphinx-build -M html source build -W
 
       - name: Upload artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

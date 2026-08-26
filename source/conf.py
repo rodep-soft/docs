@@ -45,4 +45,8 @@ html_static_path = ['_static']
 # Furo theme options
 html_theme_options = {
     "sidebar_hide_name": False,
+    "source_repository": "https://github.com/rodep-soft/docs",
+    "source_branch": "main",
+    "source_directory": "source/",
+    "navigation_with_keys": True,
 }

@@ -13,5 +13,5 @@ PIDからモータ制御、運動学まで。ロボットを「思い通りに�
 :hidden:
 
 *
-kinematics/*
+kinematics/intro
 ```
