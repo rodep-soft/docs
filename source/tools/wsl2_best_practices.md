@@ -52,7 +52,7 @@ WSL2でマイコン（STM32など）やUSBカメラを認識させるための�
 #### 2.2 Udev ルールの設定
 WSL2にパススルーされたデバイスに対して、権限（Permission denied）エラーを防ぐために `udev` ルールを記述します。
 
-```udev
+```bash
 ## 例: ST-Link/V2-1 (STM32 nucleo f446re board)
 ## `lsusb -v` でidVendorとidProductを確認
 SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="374b", MODE="0666"
@@ -80,6 +80,3 @@ GUIが重いと感じた場合は、Xwaylandラッパーのオーバーヘッド
 過去の議論において、WSL2環境下での `Docker Compose` ビルド（コンテナ再生成）に13〜14秒程度かかることが指摘されています。これはネイティブLinux環境（約10秒）に比べて明確なオーバーヘッドです。
 
 - **結論**: 「普段使い（Daily driver）としてのWindowsの利便性」と「Linux開発環境」を両立させたい層にとってはWSL2は有用ですが、USBハードウェア制御や極限のパフォーマンス（コンパイル速度、GUIの軽量さ）を求めるロボティクス・組み込み開発においては、UbuntuやArch Linuxのネイティブインストール、あるいは Pixi や Nix といった代替ツールの使用が最終的な最適解となる傾向にあります。
-
-
----

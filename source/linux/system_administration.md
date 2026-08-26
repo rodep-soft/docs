@@ -204,7 +204,7 @@ found, all possible attributes in the udev rules key format.
 
 ロボットに複数のマイコンボード（ESP32、STM32など）を接続する場合、起動順序によって `/dev/ttyUSB0` と `/dev/ttyUSB1` が入れ替わってしまう問題が頻発する。これを防ぐため、一意なシンボリックリンクを作成する。
 
-```udev
+```bash
 # /etc/udev/rules.d/99-robot-devices.rules
 
 # メインモータ制御用STM32
@@ -227,7 +227,7 @@ sudo udevadm trigger
 
 デバイスが接続された瞬間に特定のプログラム（ROS2のノードなど）を自動起動したい場合、udevから直接長時間のプロセスを起動するのはアンチパターンである。代わりに systemd サービスをトリガーする。
 
-```udev
+```bash
 # /etc/udev/rules.d/99-camera.rules
 ACTION=="add", SUBSYSTEM=="video4linux", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0825", TAG+="systemd", ENV{SYSTEMD_WANTS}="camera-publisher.service"
 ```

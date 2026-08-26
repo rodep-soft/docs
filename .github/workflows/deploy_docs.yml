@@ -1,7 +1,9 @@
-name: Deploy Sphinx Docs
+name: Build & Deploy Docs
 
 on:
   push:
+    branches: ["main"]
+  pull_request:
     branches: ["main"]
   workflow_dispatch:
 
@@ -30,15 +32,18 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Build Sphinx
+      - name: Build Sphinx (HTML)
+        # -W を付けると警告をエラーとして扱いCIを落とすことも可能
         run: uv run sphinx-build -M html source build
 
       - name: Upload artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: build/html/
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

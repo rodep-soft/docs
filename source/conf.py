@@ -4,27 +4,33 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
-project = 'Wiki'
-copyright = '2026, Tatsuki Yano'
-author = 'Tatsuki Yano'
+project = 'RODEP Docs'
+copyright = '2026, RODEP'
+author = 'RODEP'
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
 extensions = [
     "myst_parser",
     "sphinx.ext.mathjax",
+    "sphinx_copybutton",
+    "sphinx_design",
+    "sphinxcontrib.mermaid",
 ]
 
+# MyST Parser settings
 myst_enable_extensions = [
-    #"colcon_fence",
+    "colon_fence",
     "dollarmath",
     "amsmath",
     "deflist",
     "tasklist",
+    "attrs_inline",
+    "attrs_block",
 ]
+
+# Copy button settings (exclude bash prompts from copied text)
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -32,14 +38,11 @@ exclude_patterns = []
 language = 'ja'
 
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-html_title = "Wiki"
-
-#html_theme = 'alabaster'
-
-# uv add furo
-# 他のテーマも使える
+html_title = "RODEP Docs"
 html_theme = "furo"
-
 html_static_path = ['_static']
+
+# Furo theme options
+html_theme_options = {
+    "sidebar_hide_name": False,
+}

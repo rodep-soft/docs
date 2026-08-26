@@ -121,7 +121,7 @@ sudo nft add rule ip nat postrouting oifname "wlan0" masquerade
 
 設定ファイル`/etc/dnsmasq.conf`を作成.内容は以下.
 
-```txt
+```text
 interface=eth0
 
 # 10.42.0.xの範囲でIPを貸し出す.DHCP Pool(50-150)

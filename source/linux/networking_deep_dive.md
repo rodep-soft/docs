@@ -118,7 +118,7 @@ Jan 26 14:10:15 hostname iwd[543]: wlan0: Disconnect event
 Intel系のWi-Fiモジュール（iwlwifi）におけるファームウェアのバグや、PCIeの省電力機能（ASPM）の不整合が原因です。
 回避策として、カーネルパラメータでASPMを無効化するか、iwlwifi のオプションで省電力機能をオフにします。
 
-```conf
+```ini
 ## /etc/modprobe.d/iwlwifi.conf
 options iwlwifi power_save=0
 options iwlmvm power_scheme=1
@@ -207,5 +207,3 @@ Windows Subsystem for Linux 2 (WSL2) を用いた開発環境では、ハード�
 グラフィックに関しては、WSL2はXwaylandラッパーを経由して描画を行っています。コンテナ技術の利用においては、WSL2経由でのDocker Compose実行は、ネイティブLinux環境と比較してコンテナの再構築にオーバーヘッドが発生する傾向があります。
 
 ネットワーク面では、WSL2の仮想スイッチやルーティング設定に起因して外部へのPingが通らない、あるいはSSH接続がタイムアウトするといった事象が頻発します。また、USBデバイスをコンテナにマウントする際のドライバ読み込みも、WSL2特有のカーネル設定やバージョンに依存するため、適切なカーネルコンフィギュレーションとネットワーク設定の調整が不可欠です。
-
----

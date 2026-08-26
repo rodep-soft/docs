@@ -1,15 +1,15 @@
-# Tools
+# ツール・開発環境
 
-開発を効率化するツール群の実践的な使い方。Docker・Git・WSL2・CI/CDなど、日常的に触るものの「ちゃんとした使い方」をまとめている。
+開発効率を高めるためのツール選定と運用プラクティス。Git、Docker、WSL2、CI/CDなど日常の開発を支える基盤をまとめている。
 
 | 記事 | 概要 |
 |---|---|
-| [CI/CD パイプライン](cicd_workflows.md) | GitHub ActionsによるCI構成、colconビルドのキャッシュ戦略、ROS2のDockerイメージの扱い方。 |
-| [DevContainer](devcontainer_advanced.md) | VS CodeのDevContainerでチーム開発環境を完全に標準化する方法。`.devcontainer/`の設計とGPU・USBデバイス対応。 |
-| [Docker ベストプラクティス](docker_best_practices.md) | マルチステージビルド、レイヤーキャッシュ、privileged不要なデバイスアクセス、ロボット開発特有の設定。 |
-| [Git ワークフロー](git_workflows_and_troubleshooting.md) | チーム開発でのブランチ戦略、PR運用、コンフリクト解消、よくやらかすミスとその対処法。 |
-| [Proxmox](proxmox.md) | ベアメタルに近い仮想化サーバの構築。LXCとKVMの使い分け、ネットワーク設計。 |
-| [WSL2](wsl2_best_practices.md) | WSL2でLinux開発環境を構築する際の設定最適化、USBデバイス連携、ファイルシステムのパフォーマンス。 |
+| [Git](git/intro.md) | ブランチ運用、リベース、Hooks、トラブルシューティングなどチーム開発の実践。 |
+| [Docker](docker/intro.md) | ロボット開発におけるDockerベストプラクティスと活用法。 |
+| [CI/CD ワークフロー](cicd_workflows.md) | GitHub Actions を活用したビルド・テスト・デプロイの自動化。 |
+| [Dev Container 活用](devcontainer_advanced.md) | VS Code Dev Containers を用いた統一開発環境の構築。 |
+| [WSL2 ベストプラクティス](wsl2_best_practices.md) | Windows 上での Linux 開発環境構築とハードウェアパススルー。 |
+| [Proxmox VE](proxmox.md) | 自宅・研究室サーバでの仮想化環境構築と運用。 |
 
 ```{toctree}
 :maxdepth: 1
@@ -17,4 +17,6 @@
 :hidden:
 
 *
+docker/*
+git/*
 ```
