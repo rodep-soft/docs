@@ -1,9 +1,13 @@
 [project]
 name = "rodep-docs"
 version = "0.1.0"
-description = "RODEP Knowledge Base and Documentation"
+description = "Knowledge Base & Personal Lab Notes by lazytatzv"
 readme = "README.md"
 requires-python = ">=3.11"
+authors = [
+    { name = "lazytatzv", email = "yano.tatsuki439@mail.kyutech.jp" },
+]
+
 dependencies = [
     "furo>=2024.8.6",
     "myst-parser>=4.0.0",

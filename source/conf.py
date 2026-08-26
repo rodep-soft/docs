@@ -5,8 +5,9 @@
 
 # -- Project information -----------------------------------------------------
 project = "RODEP Docs"
-copyright = "2026, RODEP"
-author = "RODEP"
+copyright = "2026, lazytatzv"
+author = "lazytatzv"
+
 
 # -- General configuration ---------------------------------------------------
 extensions = [
