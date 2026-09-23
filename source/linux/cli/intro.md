@@ -2,16 +2,17 @@
 
 ターミナルで日常的に使うコマンド群の実践的なメモ。デバイストラブルシューティングとパッケージ管理を中心に。
 
-| 記事 | 概要 |
-|---|---|
-| [デバイスデバッグ](device_debug.md) | `lsusb`・`dmesg`・`udev`を使ったデバイス認識トラブルの調査手順。 |
-| [パッケージマネージャ](package_manager.md) | apt・pip・cargo・nixの使い分けと、依存関係管理の考え方。 |
-| [モバイルモニター](mobile_monitor.md) | ASUS ZenScreenのLinux接続手順とDisplayLinkドライバの設定方法。 |
+| 記事                                       | 概要                                                                   |
+| ------------------------------------------ | ---------------------------------------------------------------------- |
+| [コマンドの使い方等](commands/intro.md)    | 基本的なコマンドについての説明と使う場面を勉強がてら追加していくもの。 |
+| [デバイスデバッグ](device_debug.md)        | `lsusb`・`dmesg`・`udev`を使ったデバイス認識トラブルの調査手順。       |
+| [パッケージマネージャ](package_manager.md) | apt・pip・cargo・nixの使い分けと、依存関係管理の考え方。               |
+| [モバイルモニター](mobile_monitor.md)      | ASUS ZenScreenのLinux接続手順とDisplayLinkドライバの設定方法。         |
 
 ```{toctree}
 :maxdepth: 1
 :glob:
-:hidden:
 
 *
+commands/intro
 ```
