@@ -2,16 +2,20 @@
 
 ## madモーターを動かせるようにしよう
 
+使用したマイコンは**uno_r4_minima**です。
+
 ### 1.コントローラーのスティックを用意する(e.g.HW-504)
 
 **はっきりいいますがなくてもいけます**
 
-`{image} ../../images/HW-504.webp
-:width: 500px
+画像はHW-504です。
+
+```{image} ../../images/HW-504.webp
+:width: 250px
 :height: 300px
 :align: center
 
-````
+```
 
 ### 2.ジャンパピンをつけていきます
 
@@ -19,14 +23,14 @@
 :width: 500px
 :height: 300px
 :align: center
-````
+```
 
-反対で分かりづらいですがこのセットアップで必要なものは、**GND**、**5V**、**y**、3つがあればできます。
+反対で分かりづらいですがこのセットアップで必要なものは、**GND**、**5V**、**URy(以下yとする)**、3つがあればできます。
 画像はそのうち訂正します。
 
 そしてmad_motorとGNDは共通にします。
 
-yのみanalogにつなぎほかはdigitalですがmad_motorは**チルダの付いたdigitalピンにつける必要があります**
+yのみanalogにつなぎほかはdigitalですがmad_motorは**チルダの付いたdigitalピンにつける必要があります。**
 (PWMを使うため)
 
 ```{image} ../../images/arduino.webp
@@ -35,7 +39,7 @@ yのみanalogにつなぎほかはdigitalですがmad_motorは**チルダの付�
 :align: center
 ```
 
-画像はモーターの回転が強すぎて荒れてますが参考までに。
+きれいな配線にはなってませんが参考までに。
 
 ### 3.キャリブレーションをする
 
@@ -302,6 +306,13 @@ pio run -t upload
 
 1. (書き込み)権限がない(udevに追加するなどして解決)
 2. モードが違う(resetボタンを二回押す)
+3. Servo.hのlibが読み込まれない
+
+```bash
+# platformioの.iniの一番下に以下のものを追加　
+lib_deps =
+    arduino-libraries/Servo
+```
 
 ```bash
 # シリアルモニターを起動
@@ -313,7 +324,7 @@ pio device monitor -b 115200
 
 ```bash
 # このコマンドは一時的なことに注意してください
-# また/dev/ttyACM0出ない可能性もあります(基本的にはこれ)
+# また/dev/ttyACM0出ない可能性もあります(基本的には/dev/ttyACM0となります)
 
 sudo chmod 666 /dev/ttyACM0
 ```
