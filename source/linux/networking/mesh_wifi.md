@@ -28,11 +28,12 @@ Enterprise認証でなければ使える. 九工大Wifi(KIT-IA/IB)はPEAP認証�
 この方法であれば後続の設定はいらない.
 
 1. NetworkManagerでWifiに接続(以下KIT-IA/IB接続設定例)
-  - WPA2-Enterprise
-  - PEAP(Protected EAP)
-  - No CA certificate
-  - Identity -> 九工大のID, xxxxYYYYみたいなやつ
-  - Password -> 九工大パスワード
+
+- WPA2-Enterprise
+- PEAP(Protected EAP)
+- No CA certificate
+- Identity -> 九工大のID, xxxxYYYYみたいなやつ
+- Password -> 九工大パスワード
 
 2. 共有
 
@@ -71,6 +72,7 @@ $ sudo sysctl -w net.ipv4.ip_forward=1
 # 永続化
 $ echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
 ```
+
 #### IP Addrの手動割当
 
 ethxを独自NetworkのGatewayにするために固定IPを振る必要がある.
@@ -78,7 +80,7 @@ ethxを独自NetworkのGatewayにするために固定IPを振る必要がある
 ```bash
 # インターフェース名は各自変更すること
 # 以下はあくまで例なのでIPは10.xxでなくても良い. 自由
-$ sudo ip addr 10.42.0.1/24 dev eth0
+$ sudo ip addr add 10.42.0.1/24 dev eth0
 $ sudo ip link set eth0 up
 ```
 
@@ -104,6 +106,7 @@ $ sudo iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
 # 戻りWAN -> LAN
 $ sudo iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 ```
+
 `nftables`
 
 ```bash
