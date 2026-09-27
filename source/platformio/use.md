@@ -42,3 +42,12 @@ pio --version
 ```
 
 </details>
+
+<details>
+<summary>その他</summary>
+
+**後日記述追加**
+
+このようなことがこの場合いらない
+
+</details>
