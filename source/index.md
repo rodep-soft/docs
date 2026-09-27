@@ -27,6 +27,8 @@ robotics/intro
 infrastructure/intro
 network/intro
 multimedia/intro
+platformio/intro
+
 ```
 
 ```{toctree}
