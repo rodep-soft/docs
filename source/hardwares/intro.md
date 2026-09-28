@@ -13,5 +13,4 @@
 cameras/intro
 motors/intro
 
-*
 ```
