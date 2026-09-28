@@ -9,8 +9,6 @@
 :maxdepth: 1
 :glob:
 
-
-*
 cameras/intro
 motors/intro
 ```
