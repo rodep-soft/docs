@@ -30,7 +30,7 @@
 
 そしてmad_motorとGNDは共通にします。
 
-yのみanalogにつなぎほかはdigitalですがmad_motorは**チルダの付いたdigitalピンにつける必要があります。**
+yのみanalogピンのいずれかにつなぎほかはdigitalピンですがmad_motorは**チルダの付いたdigitalピンにつける必要があります。**
 (PWMを使うため)
 
 ```{image} ../../images/arduino.webp
