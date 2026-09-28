@@ -11,27 +11,22 @@
 
 高速なデータ転送ではなく、分散した制御システムを安全に動かすことが目的なので、Ethernetよりは遅いしデータ量も少ない.
 
-
-
 ### 物理層でのCANの分類
 
 - High-speed CAN（ISO 11898-2）
 
-    最も一般的なCAN.
+  最も一般的なCAN.
 
-    ここで解説するのもこれ
+  ここで解説するのもこれ
+  - 最大1Mbps (Classic CANの場合)
+  - 差動通信
+  - 120ohm終端
 
-    - 最大1Mbps (Classic CANの場合)
-    - 差動通信
-    - 120ohm終端
-
-    CAN FDでも使われる.
+  CAN FDでも使われる.
 
 - Low-speed / Fault-tolerant CAN（ISO 11898-3）
-
-    - 低速
-    - 配線障害に強い
-
+  - 低速
+  - 配線障害に強い
 
 ### 基本構成
 
@@ -53,7 +48,6 @@ CAN ControllerはMCUに内蔵されていることもある.
 - Renesas RAシリーズ
 
 MCP2515 moduleなどを使えば、SPIからCANに容易に変換することが可能である.
-
 
 ![alt text](can-twisted-pair.png)
 
@@ -180,7 +174,7 @@ CANは複数ノードが同じ線を共有するが、
 
 電気的にはwired-AND的性質で勝手に決まる. 論理的にはdominant/recessiveによる非破壊アービトレーション.
 
-要するに =>  0 AND 1 = 0
+要するに => 0 AND 1 = 0
 
 2つのノードが同時送信する場面を考える
 
@@ -206,42 +200,41 @@ CANではデータをそのまま流すのではなく、決まった構造(Fram
 
 - CAN 2.0 (Classic CAN)
 
-    最も基本的なCAN.
+  最も基本的なCAN.
+  - CAN 2.0A (Standard Frame)
 
-    - CAN 2.0A (Standard Frame)
+    ID: 11 bit
+    Data: max 8bytes
 
-        ID: 11 bit
-        Data: max 8bytes
+  - CAN 2.0B (Extended Frame)
 
-    - CAN 2.0B (Extended Frame)
-
-        ID: 29 bit
-        Data: max 8bytes
+    ID: 29 bit
+    Data: max 8bytes
 
 - CAN FD
 
-    Classic CANの拡張
+  Classic CANの拡張
 
-    Dataが64bytesまで扱える.
+  Dataが64bytesまで扱える.
 
 - CAN XL
 
-    さらに新しい拡張
+  さらに新しい拡張
 
-    最大2048 byte級のデータが扱える
+  最大2048 byte級のデータが扱える
 
 #### CAN 2.0A (Standard Frame, 11bit ID)
 
-- SOF       1 bit (dominant)
-- ID        11 bit
-- RTR       1 bit
-- IDE       1 bit (dominant)
-- r0        1 bit (dominant)
-- DLC       4 bit
-- DATA      0-8 byte
-- CRC       15 bit + delimiter 1 bit
-- ACK       2 bit
-- EOF       7 bit (recessive)
+- SOF 1 bit (dominant)
+- ID 11 bit
+- RTR 1 bit
+- IDE 1 bit (dominant)
+- r0 1 bit (dominant)
+- DLC 4 bit
+- DATA 0-8 byte
+- CRC 15 bit + delimiter 1 bit
+- ACK 2 bit
+- EOF 7 bit (recessive)
 
 r0はreserved(予約)bit. 拡張余地のために存在するが、dominant固定.
 
@@ -249,19 +242,19 @@ r0はreserved(予約)bit. 拡張余地のために存在するが、dominant固�
 
 #### CAN 2.0B (Extended Frame, 29bit ID)
 
-- SOF       1 bit (dominant)
-- Base ID   11 bit
-- SRR       1 bit (recessive)
-- IDE       1 bit (recessive)
-- Ext ID    18 bit
-- RTR       1 bit
-- r1        1 bit (dominant)
-- r0        1 bit (dominant)
-- DLC       4 bit
-- DATA      0-8 byte
-- CRC       15 bit + delimiter 1 bit
-- ACK       2 bit
-- EOF       7 bit (recessive)
+- SOF 1 bit (dominant)
+- Base ID 11 bit
+- SRR 1 bit (recessive)
+- IDE 1 bit (recessive)
+- Ext ID 18 bit
+- RTR 1 bit
+- r1 1 bit (dominant)
+- r0 1 bit (dominant)
+- DLC 4 bit
+- DATA 0-8 byte
+- CRC 15 bit + delimiter 1 bit
+- ACK 2 bit
+- EOF 7 bit (recessive)
 
 r1, r0はdominant固定.
 
@@ -277,8 +270,6 @@ CAN busは通常recessiveで待機しているが、
 1bitで、常にdominant.
 
 - SOF = 0
-
-
 
 ##### 2. Arbitration Field
 
@@ -320,12 +311,10 @@ CAN自体は意味を知らない. ただの番号.
 
 RTR = 1はそのIDのデータを送ってくださいという意味. 通信タイミングを制御しづらかったりするのであまり使われない.
 
-
 ##### 3. Control Field
 
 - IDE (Identifier Extension)
 - DLC (Data Length Code)
-
 
 ###### IDE
 
@@ -382,7 +371,6 @@ CANでは送信ノードではなく受信ノードがACKを出す.
 
 送信側がACK Slot = recessiveで送り、
 正常に受信したノードがACK Slot = dominantに変更する. ここで誰かが受け取ったことを確認できる.
-
 
 ##### 7. EOF (End Of Frame)
 
@@ -449,9 +437,9 @@ CANノードがエラーを起こしすぎたため、自分自身を通信か�
 CAN Controllerはエラー数をカウントしており、主に
 
 - TEC (Transmit Error Counter)
-    - 送信エラーカウンタ
+  - 送信エラーカウンタ
 - REC (Receive Error Counter)
-    - 受信エラーカウンタ
+  - 受信エラーカウンタ
 
 を持っている.
 
@@ -460,6 +448,7 @@ CAN Controllerはエラー数をカウントしており、主に
 通常状態. エラーが起こるとカウントが増加する.
 
 条件:
+
 - TEC < 128
 - REC < 128
 
@@ -468,8 +457,9 @@ CAN Controllerはエラー数をカウントしており、主に
 通信は継続可能だが、影響力が低下する. Busを強くdominantしない.
 
 条件:
+
 - TEC >= 128
-or
+  or
 - REC >= 128
 
 3. Bus Off
@@ -477,6 +467,7 @@ or
 通信停止.
 
 条件:
+
 - TEC >= 256
 
 この状態では
@@ -728,11 +719,13 @@ CAN通信の堅牢性は、Error Active、Error Passive、Bus Offという状態
 CANバスは差動信号（CAN_H, CAN_L）を用いるためノイズに強いとされていますが、物理層の設計を誤ると通信は容易に破綻します。
 
 #### 1.1 終端抵抗の欠落または重複
+
 CANバスの両端には必ず**120Ωの終端抵抗**が必要です。
 よくある失敗として、すべてのCANノード基板に120Ωを実装してしまい、バス全体の合成インピーダンスが低下（例えば5ノードで24Ω）し、トランシーバの駆動能力を超えて通信波形が潰れるケースがあります。
 基板設計の際は、ジャンパピンやディップスイッチで終端抵抗を有効・無効化できる回路にしておくことが推奨されます。
 
 #### 1.2 コモンモードノイズとGNDの重要性
+
 「CANは差動通信だからGNDラインは接続しなくてもよい」というのは大きな誤解です。
 各ノード間のグラウンド電位に大きな差（通常は数ボルト以上）が生じると、CANトランシーバの許容同相入力範囲（コモンモードレンジ）を超過し、通信が途絶します。特に大電流が流れるモータドライバとマイコン基板をCANで繋ぐ場合は、シグナルGNDを確実に接続するか、**絶縁型CANトランシーバ（ISO1050など）**を採用して電気的に完全に分離することが必須です。
 
