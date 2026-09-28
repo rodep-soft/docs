@@ -8,11 +8,9 @@
 ```{toctree}
 :maxdepth: 1
 :glob:
-:hidden:
 
-
-cameras/intro
-motors/intro
 
 *
+cameras/intro
+motors/intro
 ```
