@@ -30,6 +30,7 @@ multimedia/intro
 platformio/intro
 mad/intro
 base_knowledge/intro
+hardwares/intro
 
 ```
 
