@@ -9,5 +9,5 @@
 :glob:
 :hidden:
 
-*
+*n
 ```
