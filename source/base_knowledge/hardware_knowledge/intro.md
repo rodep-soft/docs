@@ -5,5 +5,5 @@
 :glob:
 :hidden:
 
-*
+
 ```
