@@ -16,4 +16,5 @@
 
 network_knowledge/intro
 hardware_knowledge/intro
+etc/intro
 ```
