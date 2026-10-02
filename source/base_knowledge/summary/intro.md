@@ -10,6 +10,12 @@
 | [主記憶と補助記憶装置の比較](compare.md) |                                        |
 | [コンピュータの五大装置](computer.md)    |                                        |
 | [CPUの処理方式?](process.md)             |                                        |
+| [入力装置](input_devices.md)             |                                        |
+| [出力装置](output_devices.md)            |                                        |
+| [インタフェース](interface.md)           | USBについてなど                        |
+| [磁気ディスク](magnetic_disk.md)         |                                        |
+| [RAMとROM](ram_and_rom.md)               |                                        |
+| [ossについて](oss.md)                    |                                        |
 
 ```{toctree}
 :maxdepth: 1
