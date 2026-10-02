@@ -7,11 +7,12 @@
 | [接頭語と文字コード](letter_code.md)     | 接頭語と文字コードについてのみあります |
 | [キャッシュメモリ](cash_memory.md)       |                                        |
 | [主記憶と補助記憶装置の比較](compare.md) |                                        |
+| [コンピュータの五大装置](computer.md)    |                                        |
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 :hidden:
 
-
+*
 ```
