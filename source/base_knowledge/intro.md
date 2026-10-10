@@ -6,7 +6,7 @@
 | 記事                                             | 概要                                                                       |
 | ------------------------------------------------ | -------------------------------------------------------------------------- |
 | [Linux commands](../linux/cli/commands/intro.md) | コマンドについてまとめられています。                                       |
-| [ネットワーク関連](network_knowledge/intro.md)   | ネットワーク関連について記載されていきます。                               |
+| [ネットワーク関連](network_info/intro.md)        | ネットワーク関連について記載されていきます。                               |
 | [hardware系](hardware_knowledge/intro.md)        | hardware系統についての知識についてまとめられます。                         |
 | [その他](etc/intro.md)                           | 上記のどれにも入らないかつ分けるまでもない分野の知識がまとめられています。 |
 
@@ -21,7 +21,7 @@
 :glob:
 :hidden:
 
-network_knowledge/intro
+network_info/intro
 hardware_knowledge/intro
 summary/intro
 etc/intro

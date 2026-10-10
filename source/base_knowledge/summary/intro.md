@@ -16,6 +16,7 @@
 | [磁気ディスク](magnetic_disk.md)         |                                        |
 | [RAMとROM](ram_and_rom.md)               |                                        |
 | [ossについて](oss.md)                    |                                        |
+| [ネットワーク方式](network_method.md)    |                                        |
 
 ```{toctree}
 :maxdepth: 1

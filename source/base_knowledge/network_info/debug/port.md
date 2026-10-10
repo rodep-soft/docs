@@ -8,6 +8,10 @@ lsof -i :<port_number>
 
 [lsofコマンドについて](../../../linux/cli/commands/lsof.md)
 
+```bash
+ss -plunt | grep :<port_number>
+```
+
 2. killする
 
 ```bash
