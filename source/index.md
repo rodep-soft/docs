@@ -31,6 +31,7 @@ platformio/intro
 mad/intro
 hardwares/intro
 base_knowledge/intro
+wsl2/intro
 
 
 ```

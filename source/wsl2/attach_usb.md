@@ -15,10 +15,8 @@ usbipd list
 ``` bash
 usbipd bind busid <bus-id>
 ```
+
 ``` bash
-usbipd bind busid <bus-id> 
-```
-``` bash 
 usbipd attach --wsl --busid <bus-id>
 ```
 <bus-id>の部分はusbipd listで表示されたBUSIDをそのまま入力する
@@ -28,5 +26,3 @@ usbipd attach --wsl --busid <bus-id>
 もう一度 `usbipd list`を実行して`STATE`が`Shared`であればよい
 もしくは，
 wsl2側で`lsusb` で対象のデバイスが表示されればok
-
-
