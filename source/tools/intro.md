@@ -11,6 +11,7 @@
 | [WSL2 ベストプラクティス](wsl2_best_practices.md) | Windows 上での Linux 開発環境構築とハードウェアパススルー。                 |
 | [Proxmox VE](proxmox.md)                          | 自宅・研究室サーバでの仮想化環境構築と運用。                                |
 | [windowsでの開発](windows/intro.md)               | windowsでの開発において役立つ構築についてのヘルプが載っている。             |
+| [DynamixelSDK](dynamixel_sdk/intro.md)            | githubの公式コードを用いた開発                                              |
 
 ```{toctree}
 :maxdepth: 1
@@ -21,4 +22,5 @@
 docker/intro
 git/intro
 windows/intro
+dynamixel_sdk/intro
 ```
