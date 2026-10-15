@@ -10,7 +10,7 @@
 
 画像はHW-504です。
 
-```{image} ../../../images/HW-504.webp
+```{image} ../../../../images/HW-504.webp
 :width: 250px
 :height: 300px
 :align: center
@@ -19,7 +19,7 @@
 
 ### 2.ジャンパピンをつけていきます
 
-```{image} ../../../images/controller.webp
+```{image} ../../../../images/controller.webp
 :width: 500px
 :height: 300px
 :align: center
@@ -33,7 +33,7 @@
 yのみanalogピンのいずれかにつなぎほかはdigitalピンですがmad_motorは**チルダの付いたdigitalピンにつける必要があります。**
 (PWMを使うため)
 
-```{image} ../../../images/arduino.webp
+```{image} ../../../../images/arduino.webp
 :width: 500px
 :height: 300px
 :align: center
