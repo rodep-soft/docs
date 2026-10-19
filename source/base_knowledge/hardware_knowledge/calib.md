@@ -4,7 +4,7 @@
 
 型はsensor_msgs/msg/CameraInfoである
 
-```txt
+```bash
 std_msgs/msg/Header header
 uint32 height
 uint32 width
@@ -22,7 +22,7 @@ sensor_msgs/msg/RegionOfInterest roi
 
 std_msgs/msg/Headerではタイムスタンプと
 
-```txt
+```bash
 builtin_interfaces/Time stamp
 string frame_id
 ```
