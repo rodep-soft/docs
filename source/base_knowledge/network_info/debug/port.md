@@ -6,7 +6,7 @@
 sudo lsof -i :<port_number>
 ```
 
-[lsofコマンドについて](../../../linux/cli/commands/lsof.md)
+[lsofコマンドについて](../../../linux/cli/commands/ss_and_lsof.md)
 
 ```bash
 sudo ss -plunt | grep <port_number>
