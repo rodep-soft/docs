@@ -18,4 +18,4 @@ sudo ss -plunt | grep <port_number>
 kill <PID_number>
 ```
 
-[killコマンドについて](../../../linux/cli/commands/kill.md)
+[killコマンドについて](../../../linux/cli/commands/kill_and_pkill.md)
