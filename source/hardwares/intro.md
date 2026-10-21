@@ -16,5 +16,6 @@
 cameras/intro
 motors/intro
 dynamixel/intro
+wheel/intro
 
 ```
