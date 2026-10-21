@@ -22,7 +22,7 @@ C++・Rust・Pythonを軸に、言語の選択理由からアーキテクチャ�
 :glob:
 :hidden:
 
-tauri/intro
+ts_and_js/intro
 
 *
 ```
