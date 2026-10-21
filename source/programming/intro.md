@@ -11,18 +11,10 @@ C++・Rust・Pythonを軸に、言語の選択理由からアーキテクチャ�
 | [Rust ベストプラクティス](rust_best_practices.md)      | 所有権・借用・ライフタイムの実践的な理解。非同期処理、FFI、ロボット制御への応用まで。                                    |
 | [ソフトウェアアーキテクチャ](software_architecture.md) | 長期的に保守可能なシステム設計の思想。DOD、DDD、ROS2との文脈でのアーキテクチャ判断。                                     |
 
-- 作成中
-
-| 記事                    | 概要           |
-| ----------------------- | -------------- |
-| [tauri](tauri/intro.md) | 作っている途中 |
-
 ```{toctree}
 :maxdepth: 1
 :glob:
 :hidden:
 
-ts_and_js/intro
 
-*
 ```
