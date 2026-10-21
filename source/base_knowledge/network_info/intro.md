@@ -10,5 +10,6 @@
 :hidden:
 
 debug/intro
+interface/intro
 
 ```

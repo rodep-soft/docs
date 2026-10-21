@@ -2,18 +2,23 @@
 
 知ったコマンドや使ったコマンドについて理解を深めるために作った。
 
-| 記事                        | 概要                             |
-| --------------------------- | -------------------------------- |
-| [grep](grep.md)             | grepコマンドについて説明します。 |
-| [ip](ip.md)                 |                                  |
-| [env](env.md)               |                                  |
-| [journalctl](journalctl.md) |                                  |
-| [lsusb](lsusb.md)           |                                  |
-| [nc](nc.md)                 |                                  |
-| [ss](ss.md)                 |                                  |
-| [systemctl](systemctl.md)   |                                  |
-| [tcpdump](tcpdump.md)       |                                  |
-| [ufw](ufw.md)               |                                  |
+| 記事 | 概要 |
+| --- | --- |
+| [intro](intro.md) | コマンド実行の前提知識や基本操作 |
+| [ping & mtr](ping_and_mtr.md) | ネットワークの疎通・応答速度確認（ping）と、経路ごとの遅延・パケットロス調査（mtr） |
+| [ss & lsof](ss_and_lsof.md) | 開いているポートの確認（ss）と、そのポートやファイルを掴んでいるプロセスの特定（lsof） |
+| [dig](dig.md) | DNSサーバーへの問い合わせ、ドメインの名前解決結果や各レコード（A, CNAME等）の確認 |
+| [ip](ip.md) | IPアドレスの確認・設定、ルーティングテーブルやネットワークインターフェースの管理（ifconfigの後継） |
+| [nc](nc.md) | 特定ポートへの接続疎通確認（Portチェック）、TCP/UDPパケットの簡易送受信（別名: netcat） |
+| [tcpdump](tcpdump.md) | ネットワークを流れるパケットをリアルタイムにキャプチャし、中身や通信の流れを解析・ダンプする |
+| [ufw](ufw.md) | ファイアウォールの通信制御（ポート開放・遮断）をシンプルかつ直感的に設定・管理する |
+| [systemctl](systemctl.md) | OSサービス（daemon）の起動・停止・再起動、ステータス確認や自動起動の設定を管理する |
+| [kill & pkill](kill_and_pkill.md) | PID指定による個別終了（kill）と、プロセス名指定による一括終了（pkill） |
+| [journalctl](journalctl.md) | systemd が収集したシステムログやサービス起動ログの閲覧・フィルタリングを行う |
+| [dmesg](dmesg.md) | カーネルのリングバッファから、ハードウェア認識やOS根幹のエラーメッセージを確認する |
+| [grep](grep.md) | ファイル内や標準入力から、特定の文字列や正規表現に一致する行を抽出・検索する |
+| [env](env.md) | 現在設定されている環境変数を一覧表示する、または一時的に環境変数を変更してコマンドを実行する |
+| [lsusb](lsusb.md) | システムに接続されている USB デバイスの一覧や詳細情報（ベンダーID、製品名など）を確認する |
 
 ```{toctree}
 :maxdepth: 1

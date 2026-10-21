@@ -3,13 +3,13 @@
 1. lsofコマンドでそのポートのpid(プロセスID)を調べる
 
 ```bash
-lsof -i :<port_number>
+sudo lsof -i :<port_number>
 ```
 
-[lsofコマンドについて](../../../linux/cli/commands/lsof.md)
+[lsofコマンドについて](../../../linux/cli/commands/ss_and_lsof.md)
 
 ```bash
-ss -plunt | grep :<port_number>
+sudo ss -plunt | grep <port_number>
 ```
 
 2. killする
@@ -18,4 +18,4 @@ ss -plunt | grep :<port_number>
 kill <PID_number>
 ```
 
-[killコマンドについて](../../../linux/cli/commands/kill.md)
+[killコマンドについて](../../../linux/cli/commands/kill_and_pkill.md)
