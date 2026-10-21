@@ -10,6 +10,9 @@
 :hidden:
 
 tauri/intro
+css/intro
+html/intro
+sqlite/intro
 
 
 ```
