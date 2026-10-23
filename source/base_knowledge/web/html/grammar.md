@@ -5,7 +5,7 @@
 
 | 記法 | 役割 |
 | --- | --- |
-| <!DOCTYPE html> |
+| &lt;!DOCTYPE html&gt; |
 
 
 閉じるときは例外な&lt;タグ名&gt;を用いる
