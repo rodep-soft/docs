@@ -21,6 +21,8 @@
 | 記事                | 概要                                             |
 | ------------------- | ------------------------------------------------ |
 | [web](web/intro.md) | いま作っている途中に学んだことがまとめられている |
+| [programming](programming/intro.md) | プログラミング言語について僕が知ったこと、学んだことが記載されていきます。 |
+
 
 ```{toctree}
 :maxdepth: 1
@@ -32,5 +34,7 @@ hardware_knowledge/intro
 summary/intro
 etc/intro
 web/intro
+programming/intro
+
 
 ```
