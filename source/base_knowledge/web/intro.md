@@ -2,7 +2,8 @@
 
 | 記事                 | 概要 |
 | -------------------- | ---- |
-| [tauri](tauri/intro) |      |
+| [tauri](tauri/intro.md) |      |
+| [html](html/intro.md) |        |
 
 ```{toctree}
 :maxdepth: 1
