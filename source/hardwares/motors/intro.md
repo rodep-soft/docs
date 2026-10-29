@@ -4,11 +4,13 @@
 | --------------------------------- | ---- |
 | [ロボストライド](edulite_el05.md) |      |
 | [M2006のsetup](m2006.md)          |      |
+| [MADモーター](mad/intro.md)       |      |
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :glob:
 :hidden:
 
+mad/intro
 *
 ```
