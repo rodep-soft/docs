@@ -6,9 +6,9 @@
 | [M2006のsetup](m2006.md)          |      |
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :glob:
 :hidden:
 
-
+*
 ```
