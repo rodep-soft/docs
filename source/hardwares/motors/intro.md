@@ -10,5 +10,6 @@
 :glob:
 :hidden:
 
-*
+edulite_el05
+m2006
 ```
