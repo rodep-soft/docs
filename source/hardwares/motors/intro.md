@@ -2,7 +2,7 @@
 
 | 記事                                | 概要 |
 | ----------------------------------- | ---- |
-| [edlite_el05](edlite_el05/intro.md) |      |
+| [edlite_el05](edulite_el05.md) |      |
 | [mad](mad/intro.md)                 |      |
 | [m2006](m2006/intro.md)             |      |
 
