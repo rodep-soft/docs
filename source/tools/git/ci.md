@@ -15,16 +15,20 @@ CIを導入するメリットは多岐にわたりますが、特に重要な理
 
 ## CIを導入する
 
-1. .github/workflowsのファイルを作る(プロジェクトルート直下)
+1. .github/workflowsのディレクトリを作る(プロジェクトルート直下)
+   GitHub Actions のワークフローを格納するディレクトリを作成します。
 
 ```bash
 mkdir -p .github/workflows
 ```
 
 2. ci.yamlを作る
+   作成したディレクトリへ移動してファイルを作成し、元のルートへ戻ります。
 
 ```bash
+cd .github/workflows
 touch ci.yaml
+cd ../..
 ```
 
 3. task-runnerを記述する
