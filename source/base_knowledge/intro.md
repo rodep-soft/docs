@@ -22,6 +22,7 @@
 | ----------------------------------- | -------------------------------------------------------------------------- |
 | [web](web/intro.md)                 | いま作っている途中に学んだことがまとめられている                           |
 | [programming](programming/intro.md) | プログラミング言語について僕が知ったこと、学んだことが記載されていきます。 |
+| [archlinux](arch_linux/intro.md) | archlinuxについて学んだことや直面したことが記載されていきます。 |
 
 ```{toctree}
 :maxdepth: 1
@@ -34,6 +35,7 @@ summary/intro
 etc/intro
 web/intro
 programming/intro
+arch_linux/intro
 
 
 ```
