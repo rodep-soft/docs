@@ -8,6 +8,7 @@
 | [Linux commands](../linux/cli/commands/intro.md) | コマンドについてまとめられています。                                       |
 | [ネットワーク関連](network_info/intro.md)        | ネットワーク関連について記載されていきます。                               |
 | [hardware系](hardware_knowledge/intro.md)        | hardware系統についての知識についてまとめられます。                         |
+| [debugまとめ](debug/intro.md)                    | 各所にちりばめられたdebugの情報を一覧にまとめたところです。                |
 | [その他](etc/intro.md)                           | 上記のどれにも入らないかつ分けるまでもない分野の知識がまとめられています。 |
 
 ## extra
@@ -22,7 +23,7 @@
 | ----------------------------------- | -------------------------------------------------------------------------- |
 | [web](web/intro.md)                 | いま作っている途中に学んだことがまとめられている                           |
 | [programming](programming/intro.md) | プログラミング言語について僕が知ったこと、学んだことが記載されていきます。 |
-| [archlinux](arch_linux/intro.md) | archlinuxについて学んだことや直面したことが記載されていきます。 |
+| [archlinux](arch_linux/intro.md)    | archlinuxについて学んだことや直面したことが記載されていきます。            |
 
 ```{toctree}
 :maxdepth: 1
@@ -36,6 +37,7 @@ etc/intro
 web/intro
 programming/intro
 arch_linux/intro
+debug/intro
 
 
 ```
