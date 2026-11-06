@@ -1,8 +1,9 @@
 # debug一覧
 
-| 記事                                                 | 概要 |
-| ---------------------------------------------------- | ---- |
-| [networkのdebug一覧](../network_info/debug/intro.md) |      |
+| 記事                                                             | 概要 |
+| ---------------------------------------------------------------- | ---- |
+| [networkのdebug一覧](../network_info/debug/intro.md)             |      |
+| [dynamixel_sdkのdebug](../../tools/dynamixel_sdk/debug/intro.md) |      |
 
 ```{toctree}
 :maxdepth: 1
